@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'core/views/screens/onBoardingScreen.dart';
 void main() {
   runApp(const Masar_app());
 }
@@ -9,7 +11,16 @@ class Masar_app extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const  MaterialApp(
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle.light.copyWith(
+        statusBarColor: Colors.white, // لون خلفية شريط الحالة
+        statusBarIconBrightness: Brightness.dark, // لون أيقونات شريط الحالة
+      ),
+    );
+    return  MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'Cairo', // تعيين الخط الافتراضي
+      ),
       debugShowCheckedModeBanner: false,
       locale: const Locale("ar"),
           localizationsDelegates: const [
@@ -21,6 +32,7 @@ class Masar_app extends StatelessWidget {
             Locale('ar'), // English
             Locale('en'), // English
           ],
+          home:OnBoardingScreen() ,
     );
   }
 }
