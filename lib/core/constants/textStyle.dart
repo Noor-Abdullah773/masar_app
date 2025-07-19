@@ -18,6 +18,7 @@ abstract class AppTextStyle {
     fontSize: 16,
     fontWeight: FontWeight.w400,
     height: 1.50,
-    color: kLightGrey
+    color: kLightGrey,
+    fontFamily: 'Cairo',
   );
 }

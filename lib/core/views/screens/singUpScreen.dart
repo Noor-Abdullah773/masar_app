@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../constants/colors.dart';
+import '../widgets/customDropDown.dart';
 import '../widgets/customLoginContainer.dart';
 import '../widgets/customTextFormField.dart';
 
@@ -12,7 +13,8 @@ class SingUpScreen extends StatefulWidget {
 
 class _SingUpScreenState extends State<SingUpScreen> {
  bool obscureText=true;
-
+ String? levelValue;
+ String? classValue;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,6 +31,7 @@ class _SingUpScreenState extends State<SingUpScreen> {
           SizedBox(height:20 ,),
           CustomTextFormField(
             label: 'الرمز السري',
+            obscureText:obscureText,
             suffixIcon:IconButton(onPressed:(){
                obscureText = !obscureText;
                  print(obscureText);
@@ -39,6 +42,17 @@ class _SingUpScreenState extends State<SingUpScreen> {
              icon:obscureText ? Icon(Icons.visibility_off) : Icon(Icons.remove_red_eye ))
           ),
           SizedBox(height:20 ,),
+          CustomDropdown(
+          hint: 'المرحلة الدراسية',
+          value:levelValue,
+          items:['1','2'],
+          onChanged: (newValue) {
+            setState(() {
+              levelValue = newValue;
+            });
+          },
+        ),
+          
           
         ],),
       ),
