@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'core/views/screens/onBoardingScreen.dart';
+import 'core/views/screens/singUpScreen.dart';
 void main() {
   runApp(const Masar_app());
 }
@@ -32,7 +33,7 @@ class Masar_app extends StatelessWidget {
             Locale('ar'), // English
             Locale('en'), // English
           ],
-          home:OnBoardingScreen() ,
+          home:SingUpScreen() ,
     );
   }
 }
