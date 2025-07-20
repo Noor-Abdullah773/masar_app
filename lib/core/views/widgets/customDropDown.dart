@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-
 import '../../constants/colors.dart';
 import '../../constants/textStyle.dart';
 
@@ -27,7 +26,6 @@ class CustomDropdown extends StatelessWidget {
         border: Border.all(color: kLightGrey, width: 1),
       ),
       child: Row(
-        
         children: [
           Expanded(
             flex:22,

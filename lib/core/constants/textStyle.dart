@@ -21,4 +21,28 @@ abstract class AppTextStyle {
     color: kLightGrey,
     fontFamily: 'Cairo',
   );
+  static const TextStyle fontSize24=TextStyle(
+    color:kDefaultFont,
+    fontSize: 24,
+    fontFamily: 'Cairo',
+    fontWeight: FontWeight.w400,
+    height: 1.33,
+    
+);
+static const TextStyle fontSize20_defaultColor=TextStyle(
+    color:kDefaultFont,
+    fontSize: 20,
+    fontFamily: 'Cairo',
+    fontWeight: FontWeight.w400,
+    height: 1.60,
+    
+);
+static const TextStyle fontSize20_LoginColor=TextStyle(
+    color:kLoginColor,
+    fontSize: 20,
+    fontFamily: 'Cairo',
+    fontWeight: FontWeight.w400,
+    height: 1.60,
+    
+);
 }
