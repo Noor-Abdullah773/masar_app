@@ -7,6 +7,7 @@ import '../widgets/customLoginContainer.dart';
 import '../widgets/customMainButton.dart';
 import '../widgets/customSmallDropDown.dart';
 import '../widgets/customTextFormField.dart';
+import '../widgets/rowForLogin.dart';
 
 class SingUpScreen extends StatefulWidget {
   const SingUpScreen({super.key});
@@ -112,13 +113,10 @@ class _SingUpScreenState extends State<SingUpScreen> {
                SizedBox(height:30 ,),
                CustomMainButton(text: 'انشاء',),
                SizedBox(height: 20,),
-               Row(mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                Text('لديك حساب ؟',style:AppTextStyle.fontSize20_defaultColor),
-                SizedBox(width:3),
-                Text(' تسجيل الدخول',style:AppTextStyle.fontSize20_LoginColor),
-               ],)
-            
+               RowForLogin(
+                text1: 'لديك حساب ؟', 
+                text2: ' تسجيل الدخول', 
+                onTap: () {  },)
             
           ],),
         ),

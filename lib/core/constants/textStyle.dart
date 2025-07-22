@@ -45,4 +45,12 @@ static const TextStyle fontSize20_LoginColor=TextStyle(
     height: 1.60,
     
 );
+      static const TextStyle fontSize14_LoginColor=TextStyle(
+          color:kLoginColor,
+          fontSize: 14,
+          fontFamily: 'Cairo',
+          fontWeight: FontWeight.w400,
+          height: 1.60,
+          
+      );
 }
